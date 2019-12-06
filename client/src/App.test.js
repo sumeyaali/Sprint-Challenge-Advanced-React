@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {render} from "@testing-library/react";
-import {getTestId} from "@testing-library/dom";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+
+test('App renders', () => {
+  render(<App />);
   // ReactDOM.unmountComponentAtNode(div);
 });
 
@@ -17,9 +16,17 @@ it('renders without crashing', () => {
 //   getByTestId(/country/i);
 // })
 
-test("both name and country are rendered", () => {
-  const {getByTestId} = render(<App />);
+test("players and title are rendered", () => {
+  const {getByTestId, getByText} = render(<App />)
 
-  getByTestId('name');
-  getByTestId(/country/i);
+  getByTestId(/players/i);
+  getByText(/women's world cup/i)
+  // getByTestId(/searches/i)
 })
+
+// test("both name and country are rendered", () => {
+//  const {getByText} = render(<App/>); 
+
+//  getByText(/name/i);
+//  getByText(/country/i);
+// })

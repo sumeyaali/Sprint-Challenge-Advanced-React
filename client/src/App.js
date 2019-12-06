@@ -36,7 +36,8 @@ handleChanges = e => {
 
   return (
     <div className="App">
-      <div> 
+      <h1>Women's World Cup</h1>
+      <div className="players" data-testid="players"> 
         {this.state.players.map(player => (
           <PlayerCard key={player.id} name={player.name} country={player.country} searches={player.searches}/>
         ))}
