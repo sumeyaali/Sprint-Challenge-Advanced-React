@@ -33,7 +33,11 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
     - Death/Un-mounting phase: In this phase, the component is removed from the screen. ComponenentUnmount is calle and used to clean up. 
 
 - [ ] What is the purpose of a custom hook?
+        To avoid repeating code you can customize your own hook and reuse it throughout your components. You are also applying non-visual behavior and stateful logic through your components as well. 
+    
 - [ ] Why is it important to test our apps?
+
+    This minimizes the risk of bugs seaping into our code. It reduces the risk of regressions by encouraging developers to write more testable code. 
 
 ## Project Set Up
 
